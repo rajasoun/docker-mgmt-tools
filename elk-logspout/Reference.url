@@ -1,0 +1,9 @@
+https://www.katacoda.com/courses/docker-production/launch-elk-aggregate-container-logs
+
+it becomes more important to have a centralised logging approach. Centralised loggings enables you to see an overview of your entire system. A common approach is to use the ELK stack. This stack is a combination of popular open source tools ElasticSearch, Logstash and Kibana.
+
+Each project has a defined role. ElasticSearch stores the logs. Logstash manages transforming logs into a consistent format. Kibana adds a powerful visualisation layer of your logs.
+
+The ELK stack can be combined with Logspout to aggregate container logs.
+
+This scenario will explain how to deploy ELK and start aggregating logs from containers. In future scenarios we'll go deeper into using Kibana to visualise your logs and identify application issues.

@@ -1,0 +1,7 @@
+
+stackengine stop/waiting
+docker stop/waiting
+docker start/running, process 5813
+stackengine stop/waiting
+stop: Unknown instance: 
+stackengine start/running, process 5958
