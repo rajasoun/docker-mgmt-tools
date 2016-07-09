@@ -1,0 +1,31 @@
+set daemon  30
+set logfile syslog
+
+
+set mmonit http://monit:monit@10.10.10.3:8080/collector
+# and register without credentials     # Don't register credentials
+
+set httpd port 2812 and
+    allow localhost        # allow localhost to connect to the server and
+    allow admin:monit      # require user 'admin' with password 'monit'
+
+
+## Services
+###############################################################################
+##
+## Check general system resources such as load average, cpu and memory
+## usage. Each test specifies a resource, conditions and the action to be
+## performed should a test fail.
+#
+  check system $HOST
+    if loadavg (1min) > 4 then alert
+    if loadavg (5min) > 2 then alert
+    if cpu usage > 95% for 10 cycles then alert
+    if memory usage > 75% then alert
+    if swap usage > 25% then alert
+
+check network eth0 with interface eth0
+      if failed link then alert
+      if changed link then alert
+
+
