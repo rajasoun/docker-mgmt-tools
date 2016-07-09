@@ -2,10 +2,10 @@ set daemon  30
 set logfile syslog
 
 
-set mmonit http://monit:monit@10.10.10.3:8080/collector
+set mmonit http://monit:monit@140.174.231.5:8080/collector
 # and register without credentials     # Don't register credentials
 
-set httpd port 2812 and
+set httpd port 12812 and
     allow localhost        # allow localhost to connect to the server and
     allow admin:monit      # require user 'admin' with password 'monit'
 
