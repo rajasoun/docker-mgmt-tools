@@ -1,2 +1,1 @@
-docker run -v $PWD:/ck rajasoun/controlcentre-alpine:v1
-docker run --name="controlcentre" --restart=always -d  --privileged -v /var/run/docker.sock:/var/run/docker.sock rajasoun/controlcentre-alpine:v1
+docker run --name="controlcentre" --restart=always -d  -v $PWD:/ck --privileged -v /var/run/docker.sock:/var/run/docker.sock rajasoun/controlcentre-alpine:v1
