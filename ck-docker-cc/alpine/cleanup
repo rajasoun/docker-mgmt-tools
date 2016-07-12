@@ -1,0 +1,4 @@
+docker volume rm $(docker volume ls -qf dangling=true)
+docker stop controlcentre
+docker rm controlcentre
+docker rmi -f rajasoun/controlcentre-alpine:v1

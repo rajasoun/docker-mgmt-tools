@@ -1,0 +1,1 @@
+docker run -ti rajasoun/controlcentre-alpine:v1
