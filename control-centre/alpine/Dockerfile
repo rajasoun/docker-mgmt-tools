@@ -28,6 +28,10 @@ RUN apk add --update \
 # Ex. `docker run -v $PWD:/ck rajasoun/ck-cc-alpine`
 VOLUME ["/ck"]
 
+RUN mkdir /etc/openstack
+RUN mkdir /etc/ansible
+
+
 # Default is to start a shell.  A more common behavior would be to override
 # the command when starting.
 # Ex. `docker run -ti rajasoun/ck-cc-alpine echo hostname`
