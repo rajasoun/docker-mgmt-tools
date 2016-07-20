@@ -25,7 +25,7 @@ RUN apk add --update \
   && rm -rf /var/cache/apk/* 
 
 # Add a volume so that a host filesystem can be mounted 
-# Ex. `docker run -v $PWD:/ck rajasoun/ck-cc-alpine`
+# Ex. `docker run -v $PWD:/ck rajasoun/controlcentre-alpine:v1`
 VOLUME ["/ck"]
 
 RUN mkdir /etc/openstack
@@ -34,7 +34,7 @@ RUN mkdir /etc/ansible
 
 # Default is to start a shell.  A more common behavior would be to override
 # the command when starting.
-# Ex. `docker run -ti rajasoun/ck-cc-alpine echo hostname`
+# Ex. `docker run -ti rajasoun/controlcentre-alpine:v1 echo hostname`
 CMD ["/bin/sh"]
 
 
