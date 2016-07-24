@@ -1,0 +1,8 @@
+# Custom Vagrant Settings
+#
+# This file allows to override Default Vagrant settings.
+#
+vagrant-name : control-centre
+network:
+  ip: 192.168.23.25
+  hostname: control-centre.dev

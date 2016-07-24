@@ -1,0 +1,8 @@
+---
+
+- name: Test Scripts
+  hosts: all
+
+  roles:
+    # - { role: cw.mmonit, tags: "monitoring" }
+    - { role: ansible_cc, tags: "core" }
